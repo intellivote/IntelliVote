@@ -73,7 +73,7 @@ This app helps eligible NYS voters stay informed about voting on the local level
 Used digital wireframe (Adobe XD). Included walkthrough video (see GIF below).
 
 ### [BONUS] Digital Wireframes & Mockups
-<img src="http://g.recordit.co/RU8tHJxULJ.gif" width=600><br>
+<img src="ACgwFrLwDc.gif" width=250><br>
 
 ### [BONUS] Interactive Prototype
 
