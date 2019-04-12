@@ -11,16 +11,17 @@ Group Project - README Template
 
 ## Overview
 ### Description
-[Description of your app]
+This app helps eligible NYS voters stay informed about voting on the local level.
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
-- **Category:**
-- **Mobile:**
-- **Story:**
-- **Market:**
-- **Habit:**
-- **Scope:**
+- **Category:** Reference
+- **Mobile:** Upload home address and receive list of candidates, list of future candidates,Voting location
+- **Story:** With the goal of increasing awareness of the local political climate, we intend to keep US citizens up to date with the activities of their local politicians. Thus, creating a culture of political involvement and an overall betterment of the community. We decided on making the app because while the app store contains similar voting apps, they only exist locally for states such as California and Texas and not for New York. Instead of having to search the entire web, the app is a convenient space where the user can find all the information they need to make an educated vote.
+
+- **Market:** We are targeting New York State residents of 18 years of age and older. We also engage younger people who would like to stay politically engaged.
+- **Habit:** The user may use the app frequently one or two months before the election date.
+- **Scope:** This app will only be useful for New York state residents.
 
 ## Product Spec
 
@@ -28,45 +29,51 @@ Group Project - README Template
 
 **Required Must-have Stories**
 
-* [fill in your required user stories here]
-* ...
+* Login
+* Logout
+* See the current candidates list
+* Display voting location
 
 **Optional Nice-to-have Stories**
 
-* [fill in your required user stories here]
-* ...
+* Apple Maps integration to go to voting area
+* Link to candidate website
+* Voting Mechanism(perhaps using blockchain tech)
+* Notify the user of any activity of the local politicians.
 
 ### 2. Screen Archetypes
 
-* [list first screen here]
-* [list associated required story here]
-* ...
-* [list second screen here]
-* [list associated required story here]
-* ...
+* Login
+* Login - User can login with Address
+* See the current candidates list
+* Stream - User can scroll through the list of people in office and candidates
+* Display voting location
+* Map View - User can view voting location on the map
 
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
 
-* [fill out your first tab]
-* [fill out your second tab]
-* [fill out your third tab]
+* Map
+* Candidates/Officials
 
 **Flow Navigation** (Screen to Screen)
 
-* [list first screen here]
-* [list screen navigation here]
-* ...
-* [list second screen here]
-* [list screen navigation here]
-* ...
+* Login
+* Candidate List
+* See the current candidates list
+* Voting Location
+* Display voting location
+* Candidate List
+
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
 <img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+Used digital wireframe (Adobe XD). Included walkthrough video (see GIF below).
 
 ### [BONUS] Digital Wireframes & Mockups
+<img src="http://g.recordit.co/RU8tHJxULJ.gif" width=600><br>
 
 ### [BONUS] Interactive Prototype
 
