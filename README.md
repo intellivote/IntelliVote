@@ -44,11 +44,11 @@ This app helps eligible NYS voters stay informed about voting on the future elec
 ### 2. Screen Archetypes
 
 * Login
-* Login - User can login with Address
+  * Login - User can login with Address
 * See the current candidates list
 * Stream - User can scroll through the list of candidates
 * Display voting location
-* Map View - User can view voting location on the map
+  * Map View - User can view voting location on the map
 
 ### 3. Navigation
 
@@ -60,11 +60,11 @@ This app helps eligible NYS voters stay informed about voting on the future elec
 **Flow Navigation** (Screen to Screen)
 
 * Login
-* Candidate List
+  * Candidate List
 * See the current candidates list
-* Voting Location
+  * Voting Location
 * Display voting location
-* Candidate List
+  * Candidate List
 
 
 ## Wireframes
