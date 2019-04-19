@@ -81,6 +81,7 @@ Used digital wireframe (Adobe XD). Included walkthrough video (see GIF below).
 ### Models
 
 **Post**
+
 <img src="/datamodel.png" width=250><br>
 
 
