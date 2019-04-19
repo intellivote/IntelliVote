@@ -82,7 +82,7 @@ Used digital wireframe (Adobe XD). Included walkthrough video (see GIF below).
 
 **Post**
 
-<img src="/datamodel.png" width=400><br>
+<img src="/datamodel.png" width=700><br>
 
 
 ### Networking
