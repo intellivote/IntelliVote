@@ -11,15 +11,15 @@ Group Project - README Template
 
 ## Overview
 ### Description
-This app helps eligible NYS voters stay informed about voting on the local level.
+This app helps eligible NYS voters stay informed about voting on the future elections
 
 ### App Evaluation
-[Evaluation of your app across the following attributes]
-- **Category:** Reference
-- **Mobile:** Upload home address and receive list of candidates, list of future candidates,Voting location
-- **Story:** With the goal of increasing awareness of the local political climate, we intend to keep US citizens up to date with the activities of their local politicians. Thus, creating a culture of political involvement and an overall betterment of the community. We decided on making the app because while the app store contains similar voting apps, they only exist locally for states such as California and Texas and not for New York. Instead of having to search the entire web, the app is a convenient space where the user can find all the information they need to make an educated vote.
 
-- **Market:** We are targeting New York State residents of 18 years of age and older. We also engage younger people who would like to stay politically engaged.
+- **Category:** Reference
+- **Mobile:** Upload home address and receive list of candidates, list of future candidates, and voting location.
+- **Story:** With the goal of increasing awareness of the political climate, we intend to keep US citizens up to date with the activities of their local politicians. Thus, creating a culture of political involvement and an overall betterment of the community. We decided on making the app because while the app store contains similar voting apps, they only exist for states such as California and Texas and not for New York. Instead of having to search the entire web, the app is a convenient space where the user can find all the information they need to make an educated vote.
+
+- **Market:** We are targeting New York State residents, especially the youth/Millenials, who desire to stay politically involved. 
 - **Habit:** The user may use the app frequently one or two months before the election date.
 - **Scope:** This app will only be useful for New York state residents.
 
@@ -31,7 +31,7 @@ This app helps eligible NYS voters stay informed about voting on the local level
 
 * Login
 * Logout
-* See the current candidates list
+* See the candidates list
 * Display voting location
 
 **Optional Nice-to-have Stories**
@@ -39,14 +39,14 @@ This app helps eligible NYS voters stay informed about voting on the local level
 * Apple Maps integration to go to voting area
 * Link to candidate website
 * Voting Mechanism(perhaps using blockchain tech)
-* Notify the user of any activity of the local politicians.
+* Notify the user of any activity of the politicians.
 
 ### 2. Screen Archetypes
 
 * Login
 * Login - User can login with Address
 * See the current candidates list
-* Stream - User can scroll through the list of people in office and candidates
+* Stream - User can scroll through the list of candidates
 * Display voting location
 * Map View - User can view voting location on the map
 
@@ -68,20 +68,24 @@ This app helps eligible NYS voters stay informed about voting on the local level
 
 
 ## Wireframes
-[Add picture of your hand sketched wireframes in this section]
+
 <img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
 Used digital wireframe (Adobe XD). Included walkthrough video (see GIF below).
 
 ### [BONUS] Digital Wireframes & Mockups
-<img src="ACgwFrLwDc.gif" width=250><br>
+<img src="/ACgwFrLwDc.gif" width=250><br>
 
 ### [BONUS] Interactive Prototype
 
 ## Schema 
-[This section will be completed in Unit 9]
 ### Models
-[Add table of models]
+
+**Post**
+<img src="/datamodel.png" width=250><br>
+
+
 ### Networking
-- [Add list of network requests by screen ]
+- Login Screen
+- Register Screen
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
