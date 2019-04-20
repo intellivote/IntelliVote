@@ -69,13 +69,12 @@ This app helps eligible NYS voters stay informed about voting on the future elec
 
 ## Wireframes
 
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
-Used digital wireframe (Adobe XD). Included walkthrough video (see GIF below).
+<img src="wireframedraw.png" width=600><br>
+
 
 ### [BONUS] Digital Wireframes & Mockups
 <img src="/ACgwFrLwDc.gif" width=250><br>
 
-### [BONUS] Interactive Prototype
 
 ## Schema 
 ### Models
@@ -87,6 +86,13 @@ Used digital wireframe (Adobe XD). Included walkthrough video (see GIF below).
 
 ### Networking
 - Login Screen
+    - (Read/GET) Check validation of login via Google Firebase
 - Register Screen
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+    - (Create/PUT) Creat account to allow login via Google Firebase
+- Positions Screen
+    - (Read/GET) Get list of available positions via Google Civics
+- Candidates Screen
+    - (Read/GET) Get list of candidates in desired position via Google Civics
+- Vote Location Screen
+    - (Read/GET) Get address of nearest voting location via Google Civics, return
+        snippet of map in webview
