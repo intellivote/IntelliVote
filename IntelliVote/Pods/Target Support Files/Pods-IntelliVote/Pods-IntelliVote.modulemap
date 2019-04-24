@@ -1,0 +1,6 @@
+framework module Pods_IntelliVote {
+  umbrella header "Pods-IntelliVote-umbrella.h"
+
+  export *
+  module * { export * }
+}

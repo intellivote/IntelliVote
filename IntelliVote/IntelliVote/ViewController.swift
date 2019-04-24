@@ -19,7 +19,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print ("Hello")
         
         let url = URL(string: "https://www.googleapis.com/civicinfo/v2/voterinfo?address=20108+23rd+Ave.+Bayside+NY&electionId=2000&officialOnly=true&returnAllAvailableData=true&fields=contests%2CdropOffLocations%2CearlyVoteSites%2Celection%2Ckind%2CmailOnly%2CnormalizedInput%2CotherElections%2CpollingLocations%2CprecinctId%2Csegments%2Cstate&key=AIzaSyB9-Z4TVPVAvaqu8p0_Q-iyMBcDLuNTZxo")!
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)

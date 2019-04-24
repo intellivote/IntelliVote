@@ -14,6 +14,9 @@
 		A55C0E8D2257BFB000D62665 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A55C0E8B2257BFB000D62665 /* LaunchScreen.storyboard */; };
 		A55C0E982257BFB100D62665 /* IntelliVoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C0E972257BFB100D62665 /* IntelliVoteTests.swift */; };
 		A55C0EA32257BFB100D62665 /* IntelliVoteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C0EA22257BFB100D62665 /* IntelliVoteUITests.swift */; };
+		AB42B38433DE6BF90C84434C /* Pods_IntelliVote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A4908E78F66FCD824C926C7 /* Pods_IntelliVote.framework */; };
+		BC013005B77B0C638105545E /* Pods_IntelliVoteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87CECACB3272FCCABBF16B8C /* Pods_IntelliVoteTests.framework */; };
+		C5654D77D56DF4B2F2C255D1 /* Pods_IntelliVoteUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 565D9BA07DBE482ED0A52449 /* Pods_IntelliVoteUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D859CFBBDB8167DB0EF80F2 /* Pods-IntelliVote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntelliVote.release.xcconfig"; path = "Target Support Files/Pods-IntelliVote/Pods-IntelliVote.release.xcconfig"; sourceTree = "<group>"; };
+		3A486D03949B0429A2713B88 /* Pods-IntelliVoteUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntelliVoteUITests.debug.xcconfig"; path = "Target Support Files/Pods-IntelliVoteUITests/Pods-IntelliVoteUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		565D9BA07DBE482ED0A52449 /* Pods_IntelliVoteUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IntelliVoteUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DB02782EA07CE41434745C6 /* Pods-IntelliVote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntelliVote.debug.xcconfig"; path = "Target Support Files/Pods-IntelliVote/Pods-IntelliVote.debug.xcconfig"; sourceTree = "<group>"; };
+		87CECACB3272FCCABBF16B8C /* Pods_IntelliVoteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IntelliVoteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A4908E78F66FCD824C926C7 /* Pods_IntelliVote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IntelliVote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		95E9F3EA16018C5531244BC2 /* Pods-IntelliVoteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntelliVoteTests.debug.xcconfig"; path = "Target Support Files/Pods-IntelliVoteTests/Pods-IntelliVoteTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A55C0E7F2257BFAE00D62665 /* IntelliVote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntelliVote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A55C0E822257BFAE00D62665 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A55C0E842257BFAE00D62665 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +57,8 @@
 		A55C0E9E2257BFB100D62665 /* IntelliVoteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IntelliVoteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A55C0EA22257BFB100D62665 /* IntelliVoteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntelliVoteUITests.swift; sourceTree = "<group>"; };
 		A55C0EA42257BFB100D62665 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4C52B73714AC9FF56FED3D7 /* Pods-IntelliVoteUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntelliVoteUITests.release.xcconfig"; path = "Target Support Files/Pods-IntelliVoteUITests/Pods-IntelliVoteUITests.release.xcconfig"; sourceTree = "<group>"; };
+		EDA8D66C9AB87ED5E701B8E6 /* Pods-IntelliVoteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntelliVoteTests.release.xcconfig"; path = "Target Support Files/Pods-IntelliVoteTests/Pods-IntelliVoteTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB42B38433DE6BF90C84434C /* Pods_IntelliVote.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC013005B77B0C638105545E /* Pods_IntelliVoteTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +82,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5654D77D56DF4B2F2C255D1 /* Pods_IntelliVoteUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		870B36C92B5B4B112AA0D306 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6DB02782EA07CE41434745C6 /* Pods-IntelliVote.debug.xcconfig */,
+				1D859CFBBDB8167DB0EF80F2 /* Pods-IntelliVote.release.xcconfig */,
+				95E9F3EA16018C5531244BC2 /* Pods-IntelliVoteTests.debug.xcconfig */,
+				EDA8D66C9AB87ED5E701B8E6 /* Pods-IntelliVoteTests.release.xcconfig */,
+				3A486D03949B0429A2713B88 /* Pods-IntelliVoteUITests.debug.xcconfig */,
+				D4C52B73714AC9FF56FED3D7 /* Pods-IntelliVoteUITests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A55C0E762257BFAE00D62665 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +110,8 @@
 				A55C0E962257BFB100D62665 /* IntelliVoteTests */,
 				A55C0EA12257BFB100D62665 /* IntelliVoteUITests */,
 				A55C0E802257BFAE00D62665 /* Products */,
+				870B36C92B5B4B112AA0D306 /* Pods */,
+				CC5614D447F5868597EB27BA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +156,16 @@
 			path = IntelliVoteUITests;
 			sourceTree = "<group>";
 		};
+		CC5614D447F5868597EB27BA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8A4908E78F66FCD824C926C7 /* Pods_IntelliVote.framework */,
+				87CECACB3272FCCABBF16B8C /* Pods_IntelliVoteTests.framework */,
+				565D9BA07DBE482ED0A52449 /* Pods_IntelliVoteUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +173,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A55C0EA72257BFB100D62665 /* Build configuration list for PBXNativeTarget "IntelliVote" */;
 			buildPhases = (
+				0E9F6DD0467066DB6E97A46B /* [CP] Check Pods Manifest.lock */,
 				A55C0E7B2257BFAE00D62665 /* Sources */,
 				A55C0E7C2257BFAE00D62665 /* Frameworks */,
 				A55C0E7D2257BFAE00D62665 /* Resources */,
+				882732297430047306E306C8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,6 +192,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A55C0EAA2257BFB100D62665 /* Build configuration list for PBXNativeTarget "IntelliVoteTests" */;
 			buildPhases = (
+				88A95C9CEAC089ACEBFF77B3 /* [CP] Check Pods Manifest.lock */,
 				A55C0E8F2257BFB100D62665 /* Sources */,
 				A55C0E902257BFB100D62665 /* Frameworks */,
 				A55C0E912257BFB100D62665 /* Resources */,
@@ -167,6 +211,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A55C0EAD2257BFB100D62665 /* Build configuration list for PBXNativeTarget "IntelliVoteUITests" */;
 			buildPhases = (
+				71B3437CE80B1CBD1DC242AC /* [CP] Check Pods Manifest.lock */,
 				A55C0E9A2257BFB100D62665 /* Sources */,
 				A55C0E9B2257BFB100D62665 /* Frameworks */,
 				A55C0E9C2257BFB100D62665 /* Resources */,
@@ -250,6 +295,103 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0E9F6DD0467066DB6E97A46B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IntelliVote-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		71B3437CE80B1CBD1DC242AC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IntelliVoteUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		882732297430047306E306C8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IntelliVote/Pods-IntelliVote-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/Parse/Parse.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parse.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IntelliVote/Pods-IntelliVote-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		88A95C9CEAC089ACEBFF77B3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IntelliVoteTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A55C0E7B2257BFAE00D62665 /* Sources */ = {
@@ -430,6 +572,7 @@
 		};
 		A55C0EA82257BFB100D62665 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DB02782EA07CE41434745C6 /* Pods-IntelliVote.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -448,6 +591,7 @@
 		};
 		A55C0EA92257BFB100D62665 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D859CFBBDB8167DB0EF80F2 /* Pods-IntelliVote.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -466,6 +610,7 @@
 		};
 		A55C0EAB2257BFB100D62665 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95E9F3EA16018C5531244BC2 /* Pods-IntelliVoteTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -487,6 +632,7 @@
 		};
 		A55C0EAC2257BFB100D62665 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDA8D66C9AB87ED5E701B8E6 /* Pods-IntelliVoteTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -508,6 +654,7 @@
 		};
 		A55C0EAE2257BFB100D62665 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A486D03949B0429A2713B88 /* Pods-IntelliVoteUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -528,6 +675,7 @@
 		};
 		A55C0EAF2257BFB100D62665 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4C52B73714AC9FF56FED3D7 /* Pods-IntelliVoteUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

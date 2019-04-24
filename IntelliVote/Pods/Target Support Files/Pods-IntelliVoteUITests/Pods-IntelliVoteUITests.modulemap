@@ -1,0 +1,6 @@
+framework module Pods_IntelliVoteUITests {
+  umbrella header "Pods-IntelliVoteUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
