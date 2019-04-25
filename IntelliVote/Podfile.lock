@@ -7,10 +7,12 @@ PODS:
     - Parse/Core (= 1.17.2)
   - Parse/Core (1.17.2):
     - Bolts/Tasks (~> 1.9)
+  - TextFieldEffects (1.5.1)
 
 DEPENDENCIES:
   - AlamofireImage
   - Parse
+  - TextFieldEffects
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -18,13 +20,15 @@ SPEC REPOS:
     - AlamofireImage
     - Bolts
     - Parse
+    - TextFieldEffects
 
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
   AlamofireImage: 1aea346f4dda2f6c67622fa5a89fcbb80d79cc16
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   Parse: 3b31a3dd1777b07ee7f0caee32fafbff544483a5
+  TextFieldEffects: 7d372f58aeaf9acd9626bbf962680aef926b085d
 
-PODFILE CHECKSUM: c99bba3ae6877147b5892b741d9b4cc2f075280c
+PODFILE CHECKSUM: ca3f39995990351d251233e40b0f27e764f5b311
 
-COCOAPODS: 1.6.0
+COCOAPODS: 1.6.1

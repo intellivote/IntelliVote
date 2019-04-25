@@ -8,6 +8,7 @@ target 'IntelliVote' do
   # Pods for IntelliVote
   pod "Parse"
   pod "AlamofireImage"
+  pod "TextFieldEffects"
   target 'IntelliVoteTests' do
     inherit! :search_paths
     # Pods for testing
