@@ -86,9 +86,9 @@ This app helps eligible NYS voters stay informed about voting on the future elec
 
 ### Networking
 - Login Screen
-    - (Read/GET) Check validation of login via Google Firebase
+    - (Read/GET) Check validation of login via Heroku
 - Register Screen
-    - (Create/PUT) Creat account to allow login via Google Firebase
+    - (Create/PUT) Creat account to allow login via Heroku
 - Positions Screen
     - (Read/GET) Get list of available positions via Google Civics
 - Candidates Screen
