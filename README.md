@@ -96,3 +96,8 @@ This app helps eligible NYS voters stay informed about voting on the future elec
 - Vote Location Screen
     - (Read/GET) Get address of nearest voting location via Google Civics, return
         snippet of map in webview
+        
+        
+##Unit 10 Submission
+<img src="http://g.recordit.co/AOxggjAR6T.gif" width=800><br>
+
