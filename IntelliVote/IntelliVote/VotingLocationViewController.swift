@@ -11,6 +11,11 @@ import UIKit
 class VotingLocationViewController: UIViewController {
 
 
+    @IBOutlet weak var pollLocation: UITextView!
+    
+    @IBOutlet weak var voterAddressField: UITextField!
+    
+    
     var vote = [[String:Any]]()
     
     
@@ -29,9 +34,9 @@ class VotingLocationViewController: UIViewController {
                 self.vote = dataDictionary["pollingLocations"] as! [[String: Any]]
                 let voteinfo = self.vote[0]
                 let addr = voteinfo["address"] as! [String: Any]
-                let locName = addr["locationName"] as? String
-                self.pollLocationBox.text = locName
-                print(locName)
+                let locationName = addr["locationName"] as? String
+                self.pollLocation.text = locationName
+                print(locationName)
                 //let nestedDictionary = self.vote["address"] as? [String:Any]
                 
                 
