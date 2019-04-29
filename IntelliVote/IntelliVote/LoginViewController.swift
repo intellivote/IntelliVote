@@ -8,6 +8,7 @@
 
 import UIKit
 import TextFieldEffects
+import Parse
 
 class LoginViewController: UIViewController {
 
@@ -25,6 +26,23 @@ class LoginViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
+    
+    @IBAction func onLogin(_ sender: Any) {
+        let username = usernameField.text!
+        let password = passwordField.text!
+        
+        PFUser.logInWithUsername(inBackground: username, password: password , block: {(user,error) in
+            if user != nil {
+                self.performSegue(withIdentifier: "loginSegue", sender: nil)
+            } else {
+                print("error: \(error?.localizedDescription)")
+            }
+            
+        }
+            
+        )
+    }
+    
     
 
     /*
