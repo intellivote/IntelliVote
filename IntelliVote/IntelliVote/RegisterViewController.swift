@@ -8,6 +8,7 @@
 
 import UIKit
 import TextFieldEffects
+import Parse
 class RegisterViewController: UIViewController {
 
     @IBOutlet weak var registerButton: UIButton!
@@ -33,15 +34,25 @@ class RegisterViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func onRegister(_ sender: Any) {
+        let user = PFUser()
+        user.username = registerUserNameField.text
+        user.password = registerPasswordField.text
+        user["address"] = registerAddressField.text
+        user["city"] = registerCityField.text
+        user["county"] = registerCountyField.text
+        user["zip"] = registerZipField.text
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        user.signUpInBackground {
+            (success, error) in
+            if success {
+                self.performSegue(withIdentifier: "registerSuccessSegue", sender: nil)
+            } else {
+                print("Error: \(error?.localizedDescription)")
+            }
+        }
     }
-    */
+    
+    
 
 }
