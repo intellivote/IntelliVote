@@ -7,10 +7,25 @@
 //
 
 import UIKit
-
+import TextFieldEffects
 class RegisterViewController: UIViewController {
 
     @IBOutlet weak var registerButton: UIButton!
+    
+    
+    @IBOutlet weak var registerUserNameField: HoshiTextField!
+    
+    @IBOutlet weak var registerPasswordField: HoshiTextField!
+    
+    
+    @IBOutlet weak var registerAddressField: HoshiTextField!
+    
+    @IBOutlet weak var registerCityField: HoshiTextField!
+    
+    @IBOutlet weak var registerCountyField: HoshiTextField!
+    
+    @IBOutlet weak var registerZipField: HoshiTextField!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

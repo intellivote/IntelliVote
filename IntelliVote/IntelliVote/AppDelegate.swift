@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //If logged in switch to
         if PFUser.current() != nil {
             let main = UIStoryboard(name: "Main",bundle: nil)
-            let feedNavigationController = main.instantiateViewController(withIdentifier: "FeedNavigationController")
+            let feedNavigationController = main.instantiateViewController(withIdentifier: "HomeScreenViewController")
             window?.rootViewController = feedNavigationController
         }
         

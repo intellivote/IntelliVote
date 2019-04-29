@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import TextFieldEffects
 
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var registerButton: UIButton!
     
+    @IBOutlet weak var usernameField: HoshiTextField!
+    
+    @IBOutlet weak var passwordField: HoshiTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()

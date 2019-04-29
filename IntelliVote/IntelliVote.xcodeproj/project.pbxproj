@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8617CFDD227769FB00D64815 /* VotingLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8617CFDC227769FB00D64815 /* VotingLocationViewController.swift */; };
 		A55C0E832257BFAE00D62665 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C0E822257BFAE00D62665 /* AppDelegate.swift */; };
-		A55C0E852257BFAE00D62665 /* VoteLocViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C0E842257BFAE00D62665 /* VoteLocViewController.swift */; };
 		A55C0E882257BFAE00D62665 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A55C0E862257BFAE00D62665 /* Main.storyboard */; };
 		A55C0E8A2257BFB000D62665 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A55C0E892257BFB000D62665 /* Assets.xcassets */; };
 		A55C0E8D2257BFB000D62665 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A55C0E8B2257BFB000D62665 /* LaunchScreen.storyboard */; };
@@ -16,7 +16,7 @@
 		A55C0EA32257BFB100D62665 /* IntelliVoteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C0EA22257BFB100D62665 /* IntelliVoteUITests.swift */; };
 		A588332D2271274E0027DF8B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A588332C2271274E0027DF8B /* LoginViewController.swift */; };
 		A588332F227129AE0027DF8B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A588332E227129AE0027DF8B /* RegisterViewController.swift */; };
-		A588333122712BB30027DF8B /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A588333022712BB30027DF8B /* HomeScreenViewController.swift */; };
+		A588333122712BB30027DF8B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A588333022712BB30027DF8B /* HomeViewController.swift */; };
 		AB42B38433DE6BF90C84434C /* Pods_IntelliVote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A4908E78F66FCD824C926C7 /* Pods_IntelliVote.framework */; };
 		BC013005B77B0C638105545E /* Pods_IntelliVoteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87CECACB3272FCCABBF16B8C /* Pods_IntelliVoteTests.framework */; };
 		C5654D77D56DF4B2F2C255D1 /* Pods_IntelliVoteUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 565D9BA07DBE482ED0A52449 /* Pods_IntelliVoteUITests.framework */; };
@@ -44,12 +44,12 @@
 		3A486D03949B0429A2713B88 /* Pods-IntelliVoteUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntelliVoteUITests.debug.xcconfig"; path = "Target Support Files/Pods-IntelliVoteUITests/Pods-IntelliVoteUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		565D9BA07DBE482ED0A52449 /* Pods_IntelliVoteUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IntelliVoteUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DB02782EA07CE41434745C6 /* Pods-IntelliVote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntelliVote.debug.xcconfig"; path = "Target Support Files/Pods-IntelliVote/Pods-IntelliVote.debug.xcconfig"; sourceTree = "<group>"; };
+		8617CFDC227769FB00D64815 /* VotingLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotingLocationViewController.swift; sourceTree = "<group>"; };
 		87CECACB3272FCCABBF16B8C /* Pods_IntelliVoteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IntelliVoteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A4908E78F66FCD824C926C7 /* Pods_IntelliVote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IntelliVote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		95E9F3EA16018C5531244BC2 /* Pods-IntelliVoteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntelliVoteTests.debug.xcconfig"; path = "Target Support Files/Pods-IntelliVoteTests/Pods-IntelliVoteTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A55C0E7F2257BFAE00D62665 /* IntelliVote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntelliVote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A55C0E822257BFAE00D62665 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A55C0E842257BFAE00D62665 /* VoteLocViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteLocViewController.swift; sourceTree = "<group>"; };
 		A55C0E872257BFAE00D62665 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A55C0E892257BFB000D62665 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A55C0E8C2257BFB000D62665 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -62,7 +62,7 @@
 		A55C0EA42257BFB100D62665 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A588332C2271274E0027DF8B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A588332E227129AE0027DF8B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		A588333022712BB30027DF8B /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
+		A588333022712BB30027DF8B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D4C52B73714AC9FF56FED3D7 /* Pods-IntelliVoteUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntelliVoteUITests.release.xcconfig"; path = "Target Support Files/Pods-IntelliVoteUITests/Pods-IntelliVoteUITests.release.xcconfig"; sourceTree = "<group>"; };
 		EDA8D66C9AB87ED5E701B8E6 /* Pods-IntelliVoteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntelliVoteTests.release.xcconfig"; path = "Target Support Files/Pods-IntelliVoteTests/Pods-IntelliVoteTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -134,14 +134,14 @@
 			isa = PBXGroup;
 			children = (
 				A55C0E822257BFAE00D62665 /* AppDelegate.swift */,
-				A55C0E842257BFAE00D62665 /* VoteLocViewController.swift */,
 				A55C0E862257BFAE00D62665 /* Main.storyboard */,
 				A55C0E892257BFB000D62665 /* Assets.xcassets */,
 				A55C0E8B2257BFB000D62665 /* LaunchScreen.storyboard */,
 				A55C0E8E2257BFB000D62665 /* Info.plist */,
 				A588332C2271274E0027DF8B /* LoginViewController.swift */,
 				A588332E227129AE0027DF8B /* RegisterViewController.swift */,
-				A588333022712BB30027DF8B /* HomeScreenViewController.swift */,
+				A588333022712BB30027DF8B /* HomeViewController.swift */,
+				8617CFDC227769FB00D64815 /* VotingLocationViewController.swift */,
 			);
 			path = IntelliVote;
 			sourceTree = "<group>";
@@ -408,11 +408,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8617CFDD227769FB00D64815 /* VotingLocationViewController.swift in Sources */,
 				A588332D2271274E0027DF8B /* LoginViewController.swift in Sources */,
-				A55C0E852257BFAE00D62665 /* VoteLocViewController.swift in Sources */,
 				A55C0E832257BFAE00D62665 /* AppDelegate.swift in Sources */,
 				A588332F227129AE0027DF8B /* RegisterViewController.swift in Sources */,
-				A588333122712BB30027DF8B /* HomeScreenViewController.swift in Sources */,
+				A588333122712BB30027DF8B /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

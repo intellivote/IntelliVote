@@ -110,17 +110,19 @@
                     </view>
                     <connections>
                         <outlet property="loginButton" destination="mBg-38-L2z" id="GEr-4R-wSp"/>
+                        <outlet property="passwordField" destination="hqa-Y1-eSK" id="nJk-8B-qxH"/>
                         <outlet property="registerButton" destination="ag3-rX-eZr" id="IdK-OM-kn8"/>
+                        <outlet property="usernameField" destination="T15-Lv-Tvu" id="Rid-dC-iCo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yEn-oo-xdA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-252" y="248.72563718140933"/>
         </scene>
-        <!--Home Screen View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="2No-3C-llV">
             <objects>
-                <viewController id="Q33-2g-Kkg" customClass="HomeScreenViewController" customModule="IntelliVote" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="Q33-2g-Kkg" customClass="HomeViewController" customModule="IntelliVote" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kp4-eW-lfF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -223,10 +225,10 @@
             </objects>
             <point key="canvasLocation" x="1958" y="-90"/>
         </scene>
-        <!--Vote Loc View Controller-->
+        <!--Voting Location View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="VoteLocViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="VotingLocationViewController" customModule="IntelliVote" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -425,7 +427,13 @@
                         <viewLayoutGuide key="safeArea" id="muq-BY-7hG"/>
                     </view>
                     <connections>
+                        <outlet property="registerAddressField" destination="e73-xl-qUg" id="Ah7-Nm-diI"/>
                         <outlet property="registerButton" destination="J3X-ei-g9n" id="0wR-GW-yQM"/>
+                        <outlet property="registerCityField" destination="fS9-2H-WMS" id="GWV-8S-zjw"/>
+                        <outlet property="registerCountyField" destination="Zqv-ko-k9t" id="lGK-0I-BEL"/>
+                        <outlet property="registerPasswordField" destination="ty2-PO-W80" id="cjU-fP-qr1"/>
+                        <outlet property="registerUserNameField" destination="0Km-c2-vXV" id="qlZ-pB-e7X"/>
+                        <outlet property="registerZipField" destination="eaC-2e-5FL" id="9nz-J0-zCg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="laP-G5-imM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -434,7 +442,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo2x" width="192" height="192"/>
+        <image name="logo2x" width="800" height="800"/>
         <image name="mapwhite" width="375" height="326"/>
         <image name="usericonwhite" width="800" height="800"/>
     </resources>
