@@ -204,21 +204,6 @@
             </objects>
             <point key="canvasLocation" x="2512.8000000000002" y="586.69950738916259"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="26E-Ob-Bq5">
-            <objects>
-                <viewController id="uwz-Xo-Vnr" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="3AG-CX-O4C">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.42532616853713989" green="0.76399558782577515" blue="0.85663169622421265" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="0fz-pE-PJ1"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="s7l-ly-duh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="7188" y="320.68965517241384"/>
-        </scene>
         <!--Table View Controller-->
         <scene sceneID="dFJ-mf-dxx">
             <objects>
