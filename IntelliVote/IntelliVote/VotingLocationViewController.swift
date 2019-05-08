@@ -10,9 +10,7 @@ import UIKit
 
 class VotingLocationViewController: UIViewController {
 
-
     @IBOutlet weak var pollLocation: UITextView!
-    
     @IBOutlet weak var voterAddressField: UITextField!
     
     

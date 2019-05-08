@@ -145,19 +145,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xXQ-Ln-2A9">
-                                <rect key="frame" x="130" y="387" width="115" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="Nib-CR-jaq"/>
-                                    <constraint firstAttribute="width" constant="115" id="lcm-nc-W4k"/>
-                                </constraints>
-                                <state key="normal" title="Voting Location" image="mapwhite">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="hlw-f0-sXP"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Voting Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GjU-S1-1P7">
                                 <rect key="frame" x="131" y="495" width="114" height="18"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -183,20 +170,30 @@
                                     <segue destination="UYz-jr-rd3" kind="show" id="dnO-jo-mBK"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWK-iv-lK3">
+                                <rect key="frame" x="124" y="376" width="128" height="111"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="zWK-iv-lK3" secondAttribute="height" multiplier="128:111" id="jao-hj-qHl"/>
+                                </constraints>
+                                <state key="normal" image="mapwhite"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="gIq-i9-KGL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.42532616853713989" green="0.76399558782577515" blue="0.85663169622421265" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="FbF-fM-IJ6" firstAttribute="leading" secondItem="ncg-3I-9Wa" secondAttribute="leading" constant="154" id="02E-RA-sQ0"/>
+                            <constraint firstItem="ncg-3I-9Wa" firstAttribute="trailing" secondItem="zWK-iv-lK3" secondAttribute="trailing" constant="123" id="3ok-uQ-fRl"/>
+                            <constraint firstItem="GjU-S1-1P7" firstAttribute="top" secondItem="zWK-iv-lK3" secondAttribute="bottom" constant="8" id="CT7-qE-rbl"/>
                             <constraint firstItem="ncg-3I-9Wa" firstAttribute="trailing" secondItem="GjU-S1-1P7" secondAttribute="trailing" constant="130" id="EGn-au-Q5H"/>
-                            <constraint firstItem="ncg-3I-9Wa" firstAttribute="trailing" secondItem="xXQ-Ln-2A9" secondAttribute="trailing" constant="130" id="Plc-or-O7f"/>
-                            <constraint firstItem="xXQ-Ln-2A9" firstAttribute="top" secondItem="9ZC-d1-paP" secondAttribute="bottom" constant="82" id="Q7F-NO-lzT"/>
                             <constraint firstItem="GjU-S1-1P7" firstAttribute="leading" secondItem="ncg-3I-9Wa" secondAttribute="leading" constant="131" id="V7f-1c-ngN"/>
+                            <constraint firstItem="zWK-iv-lK3" firstAttribute="top" secondItem="FbF-fM-IJ6" secondAttribute="bottom" constant="71" id="YsL-HM-sbF"/>
                             <constraint firstItem="ncg-3I-9Wa" firstAttribute="trailing" secondItem="FbF-fM-IJ6" secondAttribute="trailing" constant="153" id="iA9-VW-7Mk"/>
-                            <constraint firstItem="GjU-S1-1P7" firstAttribute="top" secondItem="xXQ-Ln-2A9" secondAttribute="bottom" constant="8" id="nHo-b1-D5Z"/>
                             <constraint firstItem="9ZC-d1-paP" firstAttribute="top" secondItem="ncg-3I-9Wa" secondAttribute="top" constant="17" id="nhC-ca-DiB"/>
                             <constraint firstItem="9ZC-d1-paP" firstAttribute="leading" secondItem="ncg-3I-9Wa" secondAttribute="leading" constant="86" id="uHZ-Mu-tJc"/>
+                            <constraint firstItem="zWK-iv-lK3" firstAttribute="leading" secondItem="ncg-3I-9Wa" secondAttribute="leading" constant="124" id="vBB-st-NQU"/>
                             <constraint firstItem="ncg-3I-9Wa" firstAttribute="trailing" secondItem="9ZC-d1-paP" secondAttribute="trailing" constant="89" id="wW4-7M-IHg"/>
-                            <constraint firstItem="xXQ-Ln-2A9" firstAttribute="leading" secondItem="ncg-3I-9Wa" secondAttribute="leading" constant="130" id="zL5-Wz-ZB1"/>
                             <constraint firstItem="FbF-fM-IJ6" firstAttribute="top" secondItem="ncg-3I-9Wa" secondAttribute="top" constant="199" id="zm7-1K-NIM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ncg-3I-9Wa"/>
@@ -205,7 +202,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zCS-vv-fhE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2512.8000000000002" y="586.95652173913049"/>
+            <point key="canvasLocation" x="2512.8000000000002" y="586.69950738916259"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="26E-Ob-Bq5">
@@ -280,10 +277,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="8KM-bY-yo5"/>
                     <connections>
-                        <outlet property="pollLocation" destination="cDm-gZ-MAG" id="Ora-9J-GIV"/>
-                        <outlet property="pollLocationBox" destination="cDm-gZ-MAG" id="eeT-BI-f6k"/>
-                        <outlet property="voteAddressText" destination="Quu-WP-Vxz" id="JmR-YM-XlL"/>
-                        <outlet property="voterAddressField" destination="Quu-WP-Vxz" id="DFB-ea-Tvh"/>
+                        <outlet property="pollLocation" destination="cDm-gZ-MAG" id="ORf-pg-pHc"/>
+                        <outlet property="voterAddressField" destination="Quu-WP-Vxz" id="fKL-iC-FD3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
