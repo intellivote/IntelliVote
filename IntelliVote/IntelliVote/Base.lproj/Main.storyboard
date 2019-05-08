@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="f5c-hU-dzc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="f5c-hU-dzc">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -96,17 +96,27 @@
                                     <segue destination="8ea-zE-orl" kind="show" id="Zyl-lw-t23"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q10-yf-Hby">
+                                <rect key="frame" x="54" y="587" width="267" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.10258613905456671" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.42532616853713989" green="0.76399558782577515" blue="0.85663169622421265" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="hqa-Y1-eSK" firstAttribute="leading" secondItem="Ktt-9L-Pti" secondAttribute="leading" constant="54" id="1Z1-bv-jF6"/>
                             <constraint firstItem="mBg-38-L2z" firstAttribute="top" secondItem="hqa-Y1-eSK" secondAttribute="bottom" constant="57" id="5vX-4A-Zqp"/>
+                            <constraint firstItem="Ktt-9L-Pti" firstAttribute="trailing" secondItem="Q10-yf-Hby" secondAttribute="trailing" constant="54" id="6uf-e2-8cC"/>
                             <constraint firstItem="Ktt-9L-Pti" firstAttribute="trailing" secondItem="hqa-Y1-eSK" secondAttribute="trailing" constant="54" id="9ZR-ps-10o"/>
                             <constraint firstItem="mBg-38-L2z" firstAttribute="centerX" secondItem="Cek-WO-foP" secondAttribute="centerX" id="GY4-c5-GFG"/>
                             <constraint firstItem="T15-Lv-Tvu" firstAttribute="top" secondItem="3lW-5a-qec" secondAttribute="bottom" constant="8" id="JgF-dG-9HA"/>
                             <constraint firstItem="hqa-Y1-eSK" firstAttribute="top" secondItem="T15-Lv-Tvu" secondAttribute="bottom" constant="22" id="N3H-X4-pla"/>
+                            <constraint firstItem="Ktt-9L-Pti" firstAttribute="bottom" secondItem="Q10-yf-Hby" secondAttribute="bottom" constant="53" id="Qn5-q6-QUN"/>
+                            <constraint firstItem="Q10-yf-Hby" firstAttribute="top" secondItem="ag3-rX-eZr" secondAttribute="bottom" constant="31" id="T9p-Th-yDv"/>
                             <constraint firstItem="Ktt-9L-Pti" firstAttribute="trailing" secondItem="T15-Lv-Tvu" secondAttribute="trailing" constant="54" id="Ttq-od-ER2"/>
                             <constraint firstItem="ag3-rX-eZr" firstAttribute="top" secondItem="mBg-38-L2z" secondAttribute="bottom" constant="23" id="asR-EP-yUY"/>
+                            <constraint firstItem="Q10-yf-Hby" firstAttribute="leading" secondItem="Ktt-9L-Pti" secondAttribute="leading" constant="54" id="gs4-sA-ocz"/>
                             <constraint firstItem="3lW-5a-qec" firstAttribute="top" secondItem="Ktt-9L-Pti" secondAttribute="top" constant="68" id="ixR-YL-XmJ"/>
                             <constraint firstItem="T15-Lv-Tvu" firstAttribute="leading" secondItem="Ktt-9L-Pti" secondAttribute="leading" constant="54" id="kb6-JS-QWg"/>
                             <constraint firstItem="ag3-rX-eZr" firstAttribute="centerX" secondItem="Cek-WO-foP" secondAttribute="centerX" id="l0X-QQ-SB4"/>
@@ -115,6 +125,7 @@
                         <viewLayoutGuide key="safeArea" id="Ktt-9L-Pti"/>
                     </view>
                     <connections>
+                        <outlet property="authLabel" destination="Q10-yf-Hby" id="mPH-xY-DlE"/>
                         <outlet property="loginButton" destination="mBg-38-L2z" id="GEr-4R-wSp"/>
                         <outlet property="passwordField" destination="hqa-Y1-eSK" id="nJk-8B-qxH"/>
                         <outlet property="registerButton" destination="ag3-rX-eZr" id="IdK-OM-kn8"/>
@@ -124,7 +135,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yEn-oo-xdA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="25" y="283"/>
+            <point key="canvasLocation" x="24.800000000000001" y="282.90854572713647"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="2No-3C-llV">
@@ -480,7 +491,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo2x" width="800" height="800"/>
+        <image name="logo2x" width="192" height="192"/>
         <image name="mapwhite" width="375" height="326"/>
         <image name="usericonwhite" width="800" height="800"/>
     </resources>

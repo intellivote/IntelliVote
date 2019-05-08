@@ -19,6 +19,9 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var passwordField: HoshiTextField!
     
+    @IBOutlet weak var authLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.loginButton.layer.cornerRadius = 15
@@ -32,12 +35,15 @@ class LoginViewController: UIViewController {
         let password = passwordField.text!
         
         
+        
         PFUser.logInWithUsername(inBackground: username, password: password) {
             (user, error) in
             if user != nil {
                 self.performSegue(withIdentifier: "loginSuccessSegue", sender: nil)
             } else {
                 print("Error: \(error?.localizedDescription)")
+                    self.authLabel.text = "Invalid username/password combination"
+                
             }
         }
     }
