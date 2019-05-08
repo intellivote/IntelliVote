@@ -35,18 +35,18 @@ class LoginViewController: UIViewController {
         PFUser.logInWithUsername(inBackground: username, password: password) {
             (user, error) in
             if user != nil {
-                self.performSegue(withIdentifier: "loginSegue", sender: nil)
+                self.performSegue(withIdentifier: "loginSuccessSegue", sender: nil)
             } else {
                 print("Error: \(error?.localizedDescription)")
             }
         }
-        
-            
-
     }
     
     
-
+    
+        
+    
+    
     /*
     // MARK: - Navigation
 
