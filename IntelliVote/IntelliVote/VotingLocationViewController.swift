@@ -21,14 +21,17 @@ class VotingLocationViewController: UIViewController, MKMapViewDelegate {
     var vote = [[String:Any]]()
     
     var locationName: String = ""
-    let civicsAPIKey = "AIzaSyAkTtnq_0xegDHjuYT0pdNDTtTgaJiBrZQ"
-    let geoAPIKey = "AIzaSyBSeb1uTC15jOYPKijcDHhwQb254p2Hz2U"
+    let APIKey = "AIzaSyDaBUfYL90FvXCO9bfQ-7qJYON-d2yiDwo"
+    
+    
     var stringCivicsURL: String = ""
     var stringGeoURL: String = ""
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         pollLocationMap.delegate = self
-        
+        voterAddressField.text = "201-08 23rd. Ave. Bayside NY"
         
 
     }
@@ -36,44 +39,19 @@ class VotingLocationViewController: UIViewController, MKMapViewDelegate {
     
     
     @IBAction func onFindLocation(_ sender: Any) {
-
-
-//                let modifiedLocationName = self.locationName.replacingOccurrences(of: " ", with: "+", options: .literal
-//                    , range: nil)
-//                let part2GeoURL = "+NY&key="
-//
-//                let stringGeoURL = part1GeoURL + modifiedLocationName + part2GeoURL + self.geoAPIKey
-//
-//                print(stringGeoURL)
-//
-//                //let mapCenter = CLLocationCoordinate2D(latitude: 37.783333, longitude: -122.416667)
-////                let mapSpan = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
-////                let region = MKCoordinateRegion(center: mapCenter, span: mapSpan)
-////                // Set animated property to true to animate the transition to the region
-////                self.pollLocationMap.setRegion(region, animated: false)
-//
-//
-//
-//            }
-//        }
-//        task.resume()
-        
         getPollLocation()
-        
         getCoordinates()
-        
-        
     }
     
     func getPollLocation() {
         let part1CivicsURL = "https://www.googleapis.com/civicinfo/v2/voterinfo?address="
-        let myAddress = voterAddressField.text
-        let modifiedAddress = myAddress!.replacingOccurrences(of: " ", with: "+", options: .literal
+        let myAddress = "201-08 23rd. Ave. Bayside NY"
+        let modifiedAddress = myAddress.replacingOccurrences(of: " ", with: "+", options: .literal
             , range: nil)
         let part2CivicsURL = "+NY&electionId=2000&officialOnly=true&returnAllAvailableData=true&fields=contests%2CdropOffLocations%2CearlyVoteSites%2Celection%2Ckind%2CmailOnly%2CnormalizedInput%2CotherElections%2CpollingLocations%2CprecinctId%2Csegments%2Cstate&key="
         
         
-        self.stringCivicsURL = part1CivicsURL + modifiedAddress + part2CivicsURL + self.civicsAPIKey
+        self.stringCivicsURL = part1CivicsURL + modifiedAddress + part2CivicsURL + self.APIKey
         
         let url = URL(string:stringCivicsURL )!
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
@@ -104,53 +82,40 @@ class VotingLocationViewController: UIViewController, MKMapViewDelegate {
                             , range: nil)
         let part2GeoURL = "+NY&key="
         
-        self.stringGeoURL = part1GeoURL + modifiedLocationName + part2GeoURL + self.geoAPIKey
+        self.stringGeoURL = part1GeoURL + modifiedLocationName + part2GeoURL + self.APIKey
         
         print(stringGeoURL)
-    }
-    
-    func getCoordinate( address : String,
-                        completionHandler: @escaping(CLLocationCoordinate2D, NSError?) -> Void ) {
-        let geocoder = CLGeocoder()
-        geocoder.geocodeAddressString(address) { (placemarks, error) in
-            if error == nil {
-                if let placemark = placemarks?[0] {
-                    let location = placemark.location!
-                    
-                    completionHandler(location.coordinate, nil)
-                    return
-                }
+        
+        
+        let url = URL(string:self.stringGeoURL )!
+        let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
+        let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
+        let task = session.dataTask(with: request) { (data, response, error) in
+            // This will run when the network request returns
+            if let error = error {
+                print(error.localizedDescription)
+            } else if let data = data {
+                let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
+                
+                print(dataDictionary)
+                
+//                self.vote = dataDictionary["pollingLocations"] as! [[String: Any]]
+//                let voteinfo = self.vote[0]
+//                let addr = voteinfo["address"] as! [String: Any]
+//                self.locationName = addr["locationName"] as! String
+//
+//                print(self.locationName)
+                
             }
-            
-            completionHandler(kCLLocationCoordinate2DInvalid, error as NSError?)
         }
+        task.resume()
+        
     }
     
+
     
-//    func openMapForPlace() {
-//
-//        let lat1 : NSString = self.venueLat
-//        let lng1 : NSString = self.venueLng
-//
-//        let latitude:CLLocationDegrees =  lat1.doubleValue
-//        let longitude:CLLocationDegrees =  lng1.doubleValue
-//
-//        let regionDistance:CLLocationDistance = 10000
-//        let coordinates = CLLocationCoordinate2DMake(latitude, longitude)
-//        let regionSpan = MKCoordinateRegionMakeWithDistance(coordinates, regionDistance, regionDistance)
-//        let options = [
-//            MKLaunchOptionsMapCenterKey: NSValue(MKCoordinate: regionSpan.center),
-//            MKLaunchOptionsMapSpanKey: NSValue(MKCoordinateSpan: regionSpan.span)
-//        ]
-//        let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
-//        let mapItem = MKMapItem(placemark: placemark)
-//        mapItem.name = "\(self.venueName)"
-//        mapItem.openInMapsWithLaunchOptions(options)
-//
-//    }
-//    Collapse
-//
-//
+    
+
     
 
     
