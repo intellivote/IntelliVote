@@ -21,7 +21,10 @@ class VotingLocationViewController: UIViewController, MKMapViewDelegate {
     var vote = [[String:Any]]()
     
     var locationName: String = ""
-    
+    let civicsAPIKey = "AIzaSyAkTtnq_0xegDHjuYT0pdNDTtTgaJiBrZQ"
+    let geoAPIKey = "AIzaSyBSeb1uTC15jOYPKijcDHhwQb254p2Hz2U"
+    var stringCivicsURL: String = ""
+    var stringGeoURL: String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         pollLocationMap.delegate = self
@@ -30,18 +33,49 @@ class VotingLocationViewController: UIViewController, MKMapViewDelegate {
 
     }
     
+    
+    
     @IBAction func onFindLocation(_ sender: Any) {
-        let part1URL = "https://www.googleapis.com/civicinfo/v2/voterinfo?address="
+
+
+//                let modifiedLocationName = self.locationName.replacingOccurrences(of: " ", with: "+", options: .literal
+//                    , range: nil)
+//                let part2GeoURL = "+NY&key="
+//
+//                let stringGeoURL = part1GeoURL + modifiedLocationName + part2GeoURL + self.geoAPIKey
+//
+//                print(stringGeoURL)
+//
+//                //let mapCenter = CLLocationCoordinate2D(latitude: 37.783333, longitude: -122.416667)
+////                let mapSpan = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+////                let region = MKCoordinateRegion(center: mapCenter, span: mapSpan)
+////                // Set animated property to true to animate the transition to the region
+////                self.pollLocationMap.setRegion(region, animated: false)
+//
+//
+//
+//            }
+//        }
+//        task.resume()
+        
+        getPollLocation()
+        
+        getCoordinates()
+        
+        
+    }
+    
+    func getPollLocation() {
+        let part1CivicsURL = "https://www.googleapis.com/civicinfo/v2/voterinfo?address="
         let myAddress = voterAddressField.text
         let modifiedAddress = myAddress!.replacingOccurrences(of: " ", with: "+", options: .literal
             , range: nil)
-        let apiKey = "AIzaSyAkTtnq_0xegDHjuYT0pdNDTtTgaJiBrZQ"
-        let part2URL = "+NY&electionId=2000&officialOnly=true&returnAllAvailableData=true&fields=contests%2CdropOffLocations%2CearlyVoteSites%2Celection%2Ckind%2CmailOnly%2CnormalizedInput%2CotherElections%2CpollingLocations%2CprecinctId%2Csegments%2Cstate&key="
+        let part2CivicsURL = "+NY&electionId=2000&officialOnly=true&returnAllAvailableData=true&fields=contests%2CdropOffLocations%2CearlyVoteSites%2Celection%2Ckind%2CmailOnly%2CnormalizedInput%2CotherElections%2CpollingLocations%2CprecinctId%2Csegments%2Cstate&key="
         
         
-        let stringURL = part1URL + modifiedAddress + part2URL + apiKey
+        self.stringCivicsURL = part1CivicsURL + modifiedAddress + part2CivicsURL + self.civicsAPIKey
         
-        let url = URL(string:stringURL )!
+        let url = URL(string:stringCivicsURL )!
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
         let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
         let task = session.dataTask(with: request) { (data, response, error) in
@@ -55,24 +89,41 @@ class VotingLocationViewController: UIViewController, MKMapViewDelegate {
                 let voteinfo = self.vote[0]
                 let addr = voteinfo["address"] as! [String: Any]
                 self.locationName = addr["locationName"] as! String
-
+                
                 print(self.locationName)
-                
-                
-                
-                let mapCenter = CLLocationCoordinate2D(latitude: 37.783333, longitude: -122.416667)
-                let mapSpan = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
-                let region = MKCoordinateRegion(center: mapCenter, span: mapSpan)
-                // Set animated property to true to animate the transition to the region
-                self.pollLocationMap.setRegion(region, animated: false)
-                
-                
                 
             }
         }
         task.resume()
+    }
+    
+    
+    func getCoordinates() {
+        let part1GeoURL = "https://maps.googleapis.com/maps/api/geocode/json?address="
+        let modifiedLocationName = self.locationName.replacingOccurrences(of: " ", with: "+", options: .literal
+                            , range: nil)
+        let part2GeoURL = "+NY&key="
         
+        self.stringGeoURL = part1GeoURL + modifiedLocationName + part2GeoURL + self.geoAPIKey
         
+        print(stringGeoURL)
+    }
+    
+    func getCoordinate( address : String,
+                        completionHandler: @escaping(CLLocationCoordinate2D, NSError?) -> Void ) {
+        let geocoder = CLGeocoder()
+        geocoder.geocodeAddressString(address) { (placemarks, error) in
+            if error == nil {
+                if let placemark = placemarks?[0] {
+                    let location = placemark.location!
+                    
+                    completionHandler(location.coordinate, nil)
+                    return
+                }
+            }
+            
+            completionHandler(kCLLocationCoordinate2DInvalid, error as NSError?)
+        }
     }
     
     
