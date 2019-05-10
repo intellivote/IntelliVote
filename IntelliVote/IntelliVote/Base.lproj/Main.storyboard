@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="f5c-hU-dzc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -255,33 +255,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Voter Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Quu-WP-Vxz" userLabel="voteAddress">
-                                <rect key="frame" x="39" y="86" width="296" height="30"/>
+                                <rect key="frame" x="39" y="109" width="296" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cDm-gZ-MAG" userLabel="pollLocation">
-                                <rect key="frame" x="39" y="191" width="296" height="456"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="SNC-QN-TTm">
+                                <rect key="frame" x="39" y="210" width="240" height="228"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <dataDetectorType key="dataDetectorTypes" address="YES"/>
-                            </textView>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gW1-xQ-9tX">
+                                <rect key="frame" x="39" y="161" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Find Location"/>
+                                <connections>
+                                    <action selector="onFindLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OpO-OI-2vy"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="8KM-bY-yo5"/>
                     <connections>
-                        <outlet property="pollLocation" destination="cDm-gZ-MAG" id="ORf-pg-pHc"/>
+                        <outlet property="pollLocationMap" destination="SNC-QN-TTm" id="pBP-1P-TXg"/>
                         <outlet property="voterAddressField" destination="Quu-WP-Vxz" id="fKL-iC-FD3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3841" y="1004"/>
+            <point key="canvasLocation" x="3840.8000000000002" y="1003.448275862069"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="h9G-D6-bgN">
@@ -486,8 +490,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo2x" width="192" height="192"/>
+        <image name="logo2x" width="800" height="800"/>
         <image name="mapwhite" width="375" height="326"/>
         <image name="usericonwhite" width="800" height="800"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Zyl-lw-t23"/>
+    </inferredMetricsTieBreakers>
 </document>
