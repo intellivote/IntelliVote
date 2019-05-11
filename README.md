@@ -109,7 +109,7 @@ This app helps eligible NYS voters stay informed about voting on the future elec
 ##Map feature
 <img src="http://g.recordit.co/dbndQWN6Xq.gif" width=250><br>
 
-##User verification
+###User verification
 <img src="http://g.recordit.co/k00m28HnQs.gif" width=250><br>
 
 
