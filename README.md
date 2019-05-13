@@ -101,7 +101,15 @@ This app helps eligible NYS voters stay informed about voting on the future elec
 ##Unit 10 Submission
 <img src="http://g.recordit.co/AOxggjAR6T.gif" width=800><br>
 
-##Unt 11 Submission
+##Unit 11 Submission
 
 <img src="http://g.recordit.co/vyhLau3fWT.gif" width=250><br>
+
+##Unit 12 Submission
+##Map feature
+<img src="http://g.recordit.co/dbndQWN6Xq.gif" width=250><br>
+
+###User verification
+<img src="http://g.recordit.co/k00m28HnQs.gif" width=250><br>
+
 
