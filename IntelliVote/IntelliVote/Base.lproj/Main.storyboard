@@ -498,7 +498,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo2x" width="800" height="800"/>
+        <image name="logo2x" width="192" height="192"/>
         <image name="mapwhite" width="375" height="326"/>
         <image name="usericonwhite" width="800" height="800"/>
     </resources>
