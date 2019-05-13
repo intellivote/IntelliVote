@@ -34,6 +34,10 @@ class RegisterViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func onTap(_ sender: Any) {
+        self.view.endEditing(true)
+    }
+    
     @IBAction func onRegister(_ sender: Any) {
         let user = PFUser()
         user.username = registerUserNameField.text

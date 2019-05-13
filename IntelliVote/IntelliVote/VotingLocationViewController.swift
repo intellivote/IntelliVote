@@ -38,6 +38,9 @@ class VotingLocationViewController: UIViewController, MKMapViewDelegate,CLLocati
 
     }
     
+    @IBAction func onTap(_ sender: Any) {
+        self.view.endEditing(true)
+    }
     
     
     @IBAction func onFindLocation(_ sender: Any) {
