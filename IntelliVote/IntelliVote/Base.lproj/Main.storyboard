@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -104,6 +103,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.42532616853713989" green="0.76399558782577515" blue="0.85663169622421265" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="hqa-Y1-eSK" firstAttribute="leading" secondItem="Ktt-9L-Pti" secondAttribute="leading" constant="54" id="1Z1-bv-jF6"/>
                             <constraint firstItem="mBg-38-L2z" firstAttribute="top" secondItem="hqa-Y1-eSK" secondAttribute="bottom" constant="57" id="5vX-4A-Zqp"/>
@@ -123,6 +123,9 @@
                             <constraint firstItem="3lW-5a-qec" firstAttribute="centerX" secondItem="Cek-WO-foP" secondAttribute="centerX" id="pLH-QQ-ZdC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ktt-9L-Pti"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="7rG-j8-l37" appends="YES" id="Gsh-0X-FHn"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="authLabel" destination="Q10-yf-Hby" id="mPH-xY-DlE"/>
@@ -134,6 +137,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yEn-oo-xdA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="7rG-j8-l37">
+                    <connections>
+                        <action selector="onTap:" destination="f5c-hU-dzc" id="qfu-u0-Bd7"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="24.800000000000001" y="282.90854572713647"/>
         </scene>
