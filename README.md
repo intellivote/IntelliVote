@@ -108,14 +108,14 @@ This app helps eligible NYS voters stay informed about voting on the future elec
 ## Unit 12 Submission
 
 ### User verification
-<img src="http://g.recordit.co/k00m28HnQs.gif" width=250>
+<img src="http://g.recordit.co/k00m28HnQs.gif" width=250><br>
 
 ### Map feature
 <img src="http://g.recordit.co/dbndQWN6Xq.gif" width=250><br>
 
 ### User Verification      |  Solarized Ocean
 :-------------------------:|:-------------------------:
-![](https://...Ocean.png)  |  ![](https://...Dark.png)
+![]<img src="http://g.recordit.co/k00m28HnQs.gif" width=250><br>  |  ![]<img src="http://g.recordit.co/dbndQWN6Xq.gif" width=250><br>
 
 
 
