@@ -109,8 +109,8 @@ This app helps eligible NYS voters stay informed about voting on the future elec
 
 ### User verification
 <img src="http://g.recordit.co/k00m28HnQs.gif" width=250>
-### Map feature
 
+### Map feature
 <img src="http://g.recordit.co/dbndQWN6Xq.gif" width=250><br>
 
 
