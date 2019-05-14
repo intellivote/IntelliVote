@@ -26,13 +26,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             })
         )
         
-        //If logged in switch to
-        //todo: Fix
-//        if PFUser.current() != nil {
-//            let main = UIStoryboard(name: "Main",bundle: nil)
-//            let voterNavigationController = main.instantiateViewController(withIdentifier: "VoterNavigationController")
-//            window?.rootViewController = voterNavigationController
-//        }
+        
+        if PFUser.current() != nil {
+            let main = UIStoryboard(name: "Main",bundle: nil)
+            let voterNavigationController = main.instantiateViewController(withIdentifier: "VoterNavigationController")
+            window?.rootViewController = voterNavigationController
+        }
         
         return true
     }
