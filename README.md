@@ -112,11 +112,10 @@ This app helps eligible NYS voters stay informed about voting on the future elec
 ### Map feature
 <img align="right" src="http://g.recordit.co/dbndQWN6Xq.gif" width=250><br>
 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+| User Verification  | Map Feature          |
+| ------------------ |:--------------------:|
+| <img align="left" src="http://g.recordit.co/k00m28HnQs.gif" width=250><br>          | <img align="right" src="http://g.recordit.co/dbndQWN6Xq.gif" width=250><br>        |
+
 
 
 
