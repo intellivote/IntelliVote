@@ -13,25 +13,34 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let backbutton = UIButton(type: .custom)
-        backbutton.setTitle("LOGOUT", for: .normal)
-        backbutton.setTitleColor(backbutton.tintColor, for: .normal) // You can change the TitleColor
-        backbutton.addTarget(self, action: Selector(("backAction")), for: .touchUpInside)
-        
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backbutton)
+//        let backbutton = UIButton(type: .custom)
+//        backbutton.setTitle("LOGOUT", for: .normal)
+//        backbutton.setTitleColor(backbutton.tintColor, for: .normal) // You can change the TitleColor
+//        backbutton.addTarget(self, action: Selector(("backAction")), for: .touchUpInside)
+//
+//        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backbutton)
         // Do any additional setup after loading the view.
     }
     
-    @objc func backAction() -> Void {
+//    @objc func backAction() -> Void {
+//        PFUser.logOut()
+//
+//        let main = UIStoryboard(name: "Main", bundle: nil)
+//        let loginViewController = main.instantiateViewController(withIdentifier: "LoginViewController")
+//        let delegate = UIApplication.shared.delegate as! AppDelegate
+//
+//        delegate.window?.rootViewController = loginViewController
+//
+//    }
+    
+    
+    @IBAction func onLogOut(_ sender: Any) {
         PFUser.logOut()
-        
         let main = UIStoryboard(name: "Main", bundle: nil)
-        let loginViewController = main.instantiateViewController(withIdentifier: "LoginViewController")
+        let loginViewController = main.instantiateViewController(withIdentifier: "LoginView")
         let delegate = UIApplication.shared.delegate as! AppDelegate
-        
         delegate.window?.rootViewController = loginViewController
-        
-    } 
+    }
     
 
     /*

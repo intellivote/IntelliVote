@@ -12,7 +12,7 @@
         <!--Login View Controller-->
         <scene sceneID="qVq-FN-a8b">
             <objects>
-                <viewController id="f5c-hU-dzc" customClass="LoginViewController" customModule="IntelliVote" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginView" id="f5c-hU-dzc" customClass="LoginViewController" customModule="IntelliVote" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Cek-WO-foP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -212,6 +212,9 @@
                                 <rect key="frame" x="16" y="7" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="onLogOut:" destination="Q33-2g-Kkg" eventType="touchUpInside" id="juk-0c-IGo"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
