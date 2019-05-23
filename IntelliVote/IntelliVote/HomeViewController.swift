@@ -10,28 +10,18 @@ import UIKit
 import Parse
 
 class HomeViewController: UIViewController {
+    @IBOutlet weak var nameLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        let backbutton = UIButton(type: .custom)
-//        backbutton.setTitle("LOGOUT", for: .normal)
-//        backbutton.setTitleColor(backbutton.tintColor, for: .normal) // You can change the TitleColor
-//        backbutton.addTarget(self, action: Selector(("backAction")), for: .touchUpInside)
-//
-//        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backbutton)
-        // Do any additional setup after loading the view.
+        let currentUser = PFUser.current()
+        nameLabel.text = currentUser?["username"] as! String
+        
     }
     
-//    @objc func backAction() -> Void {
-//        PFUser.logOut()
-//
-//        let main = UIStoryboard(name: "Main", bundle: nil)
-//        let loginViewController = main.instantiateViewController(withIdentifier: "LoginViewController")
-//        let delegate = UIApplication.shared.delegate as! AppDelegate
-//
-//        delegate.window?.rootViewController = loginViewController
-//
-//    }
+
+    
+
     
     
     @IBAction func onLogOut(_ sender: Any) {

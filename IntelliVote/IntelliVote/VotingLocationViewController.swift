@@ -10,10 +10,12 @@ import UIKit
 import Parse
 import MapKit
 import CoreLocation
+import TextFieldEffects
 
 class VotingLocationViewController: UIViewController, MKMapViewDelegate,CLLocationManagerDelegate {
 
     @IBOutlet weak var voterAddressField: UITextField!
+    @IBOutlet weak var addressButton: UIButton!
     
     var lat: Double = 0.0
     var long: Double = 0.0
@@ -36,6 +38,7 @@ class VotingLocationViewController: UIViewController, MKMapViewDelegate,CLLocati
         super.viewDidLoad()
         pollLocationMap.delegate = self
         self.voterAddressField.text = getUserAddress()
+        self.addressButton.layer.cornerRadius = 15
 
         
 
