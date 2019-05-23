@@ -160,7 +160,10 @@ class VotingLocationViewController: UIViewController, MKMapViewDelegate,CLLocati
         return currentUser?["address"] as! String
     }
     
-    
+    func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
+        guard let appleMapsURL = URL(string: "http://maps.apple.com/?q=\(self.lat),\(self.long)") else { return }
+        UIApplication.shared.open(appleMapsURL, options: [:], completionHandler: nil)
+    }
     
 
 
