@@ -12,6 +12,9 @@ import Parse
 class HomeViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
 
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let currentUser = PFUser.current()

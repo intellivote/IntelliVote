@@ -2,20 +2,15 @@
 //  CandidateListViewController.swift
 //  IntelliVote
 //
-//  Created by Mohanad Osman on 5/23/19.
+//  Created by Yaniv Bronshtein on 5/23/19.
 //  Copyright © 2019 Dean Pektas. All rights reserved.
 //
 
 import UIKit
 
 class CandidateListViewController: UIViewController {
-    
-    @IBOutlet weak var candidatePhoto: UIImageView!
-    
-    @IBOutlet weak var candidateName: UILabel!
-    
-    @IBOutlet weak var candidateParty: UILabel!
-    
+
+    @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
