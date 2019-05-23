@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8617CFDD227769FB00D64815 /* VotingLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8617CFDC227769FB00D64815 /* VotingLocationViewController.swift */; };
+		A40DE7C32297348200A2A848 /* CandidateListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40DE7C22297348200A2A848 /* CandidateListViewController.swift */; };
 		A55C0E832257BFAE00D62665 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C0E822257BFAE00D62665 /* AppDelegate.swift */; };
 		A55C0E882257BFAE00D62665 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A55C0E862257BFAE00D62665 /* Main.storyboard */; };
 		A55C0E8A2257BFB000D62665 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A55C0E892257BFB000D62665 /* Assets.xcassets */; };
@@ -48,6 +49,7 @@
 		87CECACB3272FCCABBF16B8C /* Pods_IntelliVoteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IntelliVoteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A4908E78F66FCD824C926C7 /* Pods_IntelliVote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IntelliVote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		95E9F3EA16018C5531244BC2 /* Pods-IntelliVoteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntelliVoteTests.debug.xcconfig"; path = "Target Support Files/Pods-IntelliVoteTests/Pods-IntelliVoteTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A40DE7C22297348200A2A848 /* CandidateListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateListViewController.swift; sourceTree = "<group>"; };
 		A55C0E7F2257BFAE00D62665 /* IntelliVote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntelliVote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A55C0E822257BFAE00D62665 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A55C0E872257BFAE00D62665 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				A588332E227129AE0027DF8B /* RegisterViewController.swift */,
 				A588333022712BB30027DF8B /* HomeViewController.swift */,
 				8617CFDC227769FB00D64815 /* VotingLocationViewController.swift */,
+				A40DE7C22297348200A2A848 /* CandidateListViewController.swift */,
 			);
 			path = IntelliVote;
 			sourceTree = "<group>";
@@ -408,6 +411,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A40DE7C32297348200A2A848 /* CandidateListViewController.swift in Sources */,
 				8617CFDD227769FB00D64815 /* VotingLocationViewController.swift in Sources */,
 				A588332D2271274E0027DF8B /* LoginViewController.swift in Sources */,
 				A55C0E832257BFAE00D62665 /* AppDelegate.swift in Sources */,
