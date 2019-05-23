@@ -12,17 +12,11 @@ import MapKit
 import CoreLocation
 
 class VotingLocationViewController: UIViewController, MKMapViewDelegate,CLLocationManagerDelegate {
-//class VotingLocationViewController: UIViewController {
-
-    
 
     @IBOutlet weak var voterAddressField: UITextField!
     
     var lat: Double = 0.0
     var long: Double = 0.0
-    
-    
-
     
     @IBOutlet weak var pollLocationMap: MKMapView!
     var locationName: String = ""
@@ -35,14 +29,29 @@ class VotingLocationViewController: UIViewController, MKMapViewDelegate,CLLocati
     var stringCivicsURL: String = ""
     var stringGeoURL: String = ""
     
+    var userInfo = [PFObject]()
+    var specificUserInfo: PFObject!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         pollLocationMap.delegate = self
-        voterAddressField.text = "201-08 23rd. Ave. Bayside NY"
+        self.voterAddressField.text = getUserAddress()
+
         
 
     }
+    
+//    override func viewDidAppear(_ animated: Bool) {
+//        let query = PFQuery(className:"Users")
+//
+//        query.includeKeys(["address" , "city" , "zip"])
+//        query.limit = 20
+//        query.findObjectsInBackground { (userInfo, error) in
+//            if userInfo != nil {
+//                self.userInfo = userInfo!
+//            }
+//        }
+//    }
     
     @IBAction func onTap(_ sender: Any) {
         self.view.endEditing(true)
@@ -152,6 +161,12 @@ class VotingLocationViewController: UIViewController, MKMapViewDelegate,CLLocati
         annotation.title = self.locationName
         pollLocationMap.addAnnotation(annotation)
     }
+    
+    func getUserAddress() ->String {
+        let currentUser = PFUser.current()
+        return currentUser?["address"] as! String
+    }
+    
     
     
 
