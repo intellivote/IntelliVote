@@ -18,8 +18,14 @@ class VotingLocationViewController: UIViewController, MKMapViewDelegate,CLLocati
 
     @IBOutlet weak var voterAddressField: UITextField!
     
-    @IBOutlet weak var pollLocationMap: MKMapView!
+    var lat: Double = 0.0
+    var long: Double = 0.0
     
+    
+
+    
+    @IBOutlet weak var pollLocationMap: MKMapView!
+    var locationName: String = ""
     var vote = [[String:Any]]()
 
 //    var locationName: String = ""
@@ -45,10 +51,11 @@ class VotingLocationViewController: UIViewController, MKMapViewDelegate,CLLocati
     
     @IBAction func onFindLocation(_ sender: Any) {
         getPollLocation()
+        
     }
     
     func getPollLocation() {
-        var locationName = ""
+        // var locationName = ""
         
         let part1CivicsURL = "https://www.googleapis.com/civicinfo/v2/voterinfo?address="
         let myAddress = "201-08 23rd. Ave. Bayside NY"
@@ -72,9 +79,9 @@ class VotingLocationViewController: UIViewController, MKMapViewDelegate,CLLocati
                 self.vote = dataDictionary["pollingLocations"] as! [[String: Any]]
                 let voteinfo = self.vote[0]
                 let addr = voteinfo["address"] as! [String: Any]
-                locationName = addr["locationName"] as! String
+                self.locationName = addr["locationName"] as! String
                 let part1GeoURL = "https://maps.googleapis.com/maps/api/geocode/json?address="
-                let modifiedLocationName = locationName.replacingOccurrences(of: " ", with: "+", options: .literal, range: nil)
+                let modifiedLocationName = self.locationName.replacingOccurrences(of: " ", with: "+", options: .literal, range: nil)
                 
                 let part2GeoURL = "+NY&key="
                 self.stringGeoURL = part1GeoURL + modifiedLocationName + part2GeoURL + self.APIKey
@@ -102,11 +109,11 @@ class VotingLocationViewController: UIViewController, MKMapViewDelegate,CLLocati
                         let locationCoordinates = geometry["location"] as! [String:Any]
                         
                         
-                        let lat = locationCoordinates["lat"] as! Double
-                        let long = locationCoordinates["lng"] as! Double
+                        self.lat = locationCoordinates["lat"] as! Double
+                        self.long = locationCoordinates["lng"] as! Double
                         
                         
-                        let centerLocation = CLLocation(latitude: lat, longitude: long)
+                        let centerLocation = CLLocation(latitude: self.lat, longitude: self.long)
                         self.goToLocation(location: centerLocation)
                         
                         
@@ -126,6 +133,7 @@ class VotingLocationViewController: UIViewController, MKMapViewDelegate,CLLocati
         }
         
         task.resume()
+        
 
        
     }
@@ -134,6 +142,15 @@ class VotingLocationViewController: UIViewController, MKMapViewDelegate,CLLocati
         let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
         let region = MKCoordinateRegion(center: location.coordinate, span: span)
         pollLocationMap.setRegion(region, animated: false)
+        addPin()
+    }
+    
+    func addPin() {
+        let annotation = MKPointAnnotation()
+        let locationCoordinate = CLLocationCoordinate2D(latitude: self.lat, longitude: self.long)
+        annotation.coordinate = locationCoordinate
+        annotation.title = self.locationName
+        pollLocationMap.addAnnotation(annotation)
     }
     
     
