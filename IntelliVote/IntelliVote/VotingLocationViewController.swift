@@ -41,17 +41,7 @@ class VotingLocationViewController: UIViewController, MKMapViewDelegate,CLLocati
 
     }
     
-//    override func viewDidAppear(_ animated: Bool) {
-//        let query = PFQuery(className:"Users")
-//
-//        query.includeKeys(["address" , "city" , "zip"])
-//        query.limit = 20
-//        query.findObjectsInBackground { (userInfo, error) in
-//            if userInfo != nil {
-//                self.userInfo = userInfo!
-//            }
-//        }
-//    }
+
     
     @IBAction func onTap(_ sender: Any) {
         self.view.endEditing(true)
@@ -67,7 +57,7 @@ class VotingLocationViewController: UIViewController, MKMapViewDelegate,CLLocati
         // var locationName = ""
         
         let part1CivicsURL = "https://www.googleapis.com/civicinfo/v2/voterinfo?address="
-        let myAddress = "201-08 23rd. Ave. Bayside NY"
+        let myAddress = voterAddressField.text!
         let modifiedAddress = myAddress.replacingOccurrences(of: " ", with: "+", options: .literal
             , range: nil)
         let part2CivicsURL = "+NY&electionId=2000&officialOnly=true&returnAllAvailableData=true&fields=contests%2CdropOffLocations%2CearlyVoteSites%2Celection%2Ckind%2CmailOnly%2CnormalizedInput%2CotherElections%2CpollingLocations%2CprecinctId%2Csegments%2Cstate&key="
