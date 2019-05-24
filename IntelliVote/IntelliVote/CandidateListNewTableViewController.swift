@@ -70,17 +70,19 @@ class CandidateListNewTableViewController: UIViewController, UITableViewDataSour
                 
                 
                 self.candidates = firstRow["candidates"] as! [[String: Any]]
-                let firstCandidate = self.candidates[0]
-                let firstCandidateName = firstCandidate["name"] as! String
-
-                let firstCandidateParty =  firstCandidate["party"] as! String
-
-                let firstCandidatePhotoUrl = firstCandidate["photoUrl"] as! String
-                print("Candidate Name:")
-                print(firstCandidateName)
-                print("Candidate Party:")
-                print(firstCandidateParty)
+                self.tableView.reloadData()
                 
+//                let firstCandidate = self.candidates[0]
+//                let firstCandidateName = firstCandidate["name"] as! String
+//
+//                let firstCandidateParty =  firstCandidate["party"] as! String
+//
+//                let firstCandidatePhotoUrl = firstCandidate["photoUrl"] as! String
+//                print("Candidate Name:")
+//                print(firstCandidateName)
+//                print("Candidate Party:")
+//                print(firstCandidateParty)
+//
                 
                 
                 
