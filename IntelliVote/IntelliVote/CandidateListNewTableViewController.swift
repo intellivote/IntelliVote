@@ -110,6 +110,8 @@ class CandidateListNewTableViewController: UIViewController, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         
+        let cand = contests[0]
+        
         cell.textLabel!.text="row: \(indexPath.row)"
         
         return cell
