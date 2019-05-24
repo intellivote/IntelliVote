@@ -9,6 +9,12 @@
 import UIKit
 
 class CandidateCell: UITableViewCell {
+    
+    @IBOutlet weak var candidatePhoto: UIImageView!
+    @IBOutlet weak var candidateName: UILabel!
+    @IBOutlet weak var candidateParty: UILabel!
+    @IBOutlet weak var candidateOffice: UILabel!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()

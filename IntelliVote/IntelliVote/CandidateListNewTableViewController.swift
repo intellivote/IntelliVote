@@ -109,11 +109,27 @@ class CandidateListNewTableViewController: UIViewController, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CandidateViewCell") as! CandidateCell
         let specificCandidate = self.candidates[indexPath.row]
         //cell.textLabel!.text = specificCandidate["name"] as! String
-    
+        let name = specificCandidate["name"] as! String
+        let party = specificCandidate["party"] as! String
+        
+        
+        cell.candidateName.text = name
+        cell.candidateParty.text = party
+        
+        let baseUrl = specificCandidate["photoUrl"] as! String
+        let imageUrl = URL(string: baseUrl)
+        cell.candidatePhoto.af_setImage(withURL: imageUrl!)
+        
+        let firstRow = self.contests[0]
+        let office = firstRow["office"] as! String
+        cell.candidateOffice.text = office
+        
+        
         return cell
+    }
         
         
 //        print("heyooo")
@@ -128,8 +144,7 @@ class CandidateListNewTableViewController: UIViewController, UITableViewDataSour
 //        return cell
         
         
-        
-    }
+    
     
     
 //    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
