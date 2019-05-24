@@ -10,36 +10,35 @@ import UIKit
 import AlamofireImage
 import Parse
 
-class CandidateListNewTableViewController: UITableViewController {
-
-    let APIKey = "AIzaSyDaBUfYL90FvXCO9bfQ-7qJYON-d2yiDwo"
+class CandidateListNewTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    let APIKey = "AIzaSyDaBUfYL90FvXCO9bfQ-7qJYON-d2yiDwo"
+  
     var candidates = [[String: Any]]()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
+        
         loadCandidates()
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
     }
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
     
     func loadCandidates() {
         let part1CivicsURL = "https://www.googleapis.com/civicinfo/v2/voterinfo?address="
@@ -65,8 +64,30 @@ class CandidateListNewTableViewController: UITableViewController {
                 let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
                 
                 let contests = dataDictionary["contests"] as! [[String: Any]]
+                let firstRow = contests[0]
+                let office = firstRow["office"] as! String
                 
-                print(contests)
+                
+                let candidates = firstRow["candidates"] as! [[String: Any]]
+                
+            
+                print("ayooo")
+                
+                
+                
+//                let firstCandidateName = firstCandidate["name"] as! String
+//
+//                let firstCandidateParty =  firstCandidate["party"] as! String
+//
+//                let firstCandidatePhotoUrl = firstCandidate["photoUrl"] as! String
+//                print("Candidate Name:")
+//                print(firstCandidateName)
+//                print("Candidate Party:")
+//                print(firstCandidateParty)
+                
+                
+                
+                
                 
                 //let candidatesV1 = contests
                 //                let candidatesV1 = contests
@@ -81,6 +102,45 @@ class CandidateListNewTableViewController: UITableViewController {
         }
         task.resume()
     }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 50
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        
+        cell.textLabel!.text="row: \(indexPath.row)"
+        
+        return cell
+        
+        
+//        print("heyooo")
+//        let cell = UITableViewCell()
+//        let specificCandidate = candidates[indexPath.row]
+//        print("My candidate:\n")
+//        print(specificCandidate)
+//        let candName = specificCandidate["name"] as! String
+//
+//        cell.textLabel!.text = candName
+//
+//        return cell
+        
+        
+        
+    }
+    
+    
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        print("heyooo")
+//
+//        let specificCandidate = candidates[indexPath.row]
+//        let candName = specificCandidate["name"] as! String
+//
+//        cell.textLabel!.text = candName
+//
+//        return cell
+//    }
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
