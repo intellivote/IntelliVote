@@ -17,7 +17,7 @@ class CandidateListViewController: UIViewController, UICollectionViewDataSource,
     
     let APIKey = "AIzaSyDaBUfYL90FvXCO9bfQ-7qJYON-d2yiDwo"
     
-    var contests = [[String : Any]]()
+//    var contests = [[String : Any]]()
     
     var candidates = [[String: Any]]()
     
@@ -50,15 +50,19 @@ class CandidateListViewController: UIViewController, UICollectionViewDataSource,
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
         let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
         let task = session.dataTask(with: request) { (data, response, error) in
+            
             // This will run when the network request returns
             if let error = error {
                 print(error.localizedDescription)
             } else if let data = data {
                 let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
                 
-                self.contests = dataDictionary["contests"] as! [[String: Any]]
-                self.candidates = [self.contests[3] ]
-
+                let contests = dataDictionary["contests"] as! [[String: Any]]
+                
+                let candidatesV1 = contests[
+//                let candidatesV1 = contests
+//                self.candidates = [contests[3]]
+//                print(self.candidates.count)
                 
                 
 //                let candidateInfo = self.contests["candidates"] as? [[String:Any]]
@@ -67,7 +71,7 @@ class CandidateListViewController: UIViewController, UICollectionViewDataSource,
                 
             }
         }
-            task.resume()
+        task.resume()
             
     }
     
@@ -84,7 +88,7 @@ class CandidateListViewController: UIViewController, UICollectionViewDataSource,
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
-        return contests.count
+        return candidates.count
         
     }
     
