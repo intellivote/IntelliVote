@@ -19,6 +19,7 @@ class CandidateListNewTableViewController: UIViewController, UITableViewDataSour
   
     var candidates = [[String: Any]]()
     
+    var contests =  [[String: Any]]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,27 +64,22 @@ class CandidateListNewTableViewController: UIViewController, UITableViewDataSour
             } else if let data = data {
                 let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
                 
-                let contests = dataDictionary["contests"] as! [[String: Any]]
-                let firstRow = contests[0]
+                self.contests = dataDictionary["contests"] as! [[String: Any]]
+                let firstRow = self.contests[0]
                 let office = firstRow["office"] as! String
                 
                 
-                let candidates = firstRow["candidates"] as! [[String: Any]]
-                
-            
-                print("ayooo")
-                
-                
-                
-//                let firstCandidateName = firstCandidate["name"] as! String
-//
-//                let firstCandidateParty =  firstCandidate["party"] as! String
-//
-//                let firstCandidatePhotoUrl = firstCandidate["photoUrl"] as! String
-//                print("Candidate Name:")
-//                print(firstCandidateName)
-//                print("Candidate Party:")
-//                print(firstCandidateParty)
+                self.candidates = firstRow["candidates"] as! [[String: Any]]
+                let firstCandidate = self.candidates[0]
+                let firstCandidateName = firstCandidate["name"] as! String
+
+                let firstCandidateParty =  firstCandidate["party"] as! String
+
+                let firstCandidatePhotoUrl = firstCandidate["photoUrl"] as! String
+                print("Candidate Name:")
+                print(firstCandidateName)
+                print("Candidate Party:")
+                print(firstCandidateParty)
                 
                 
                 
@@ -104,16 +100,15 @@ class CandidateListNewTableViewController: UIViewController, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 50
+        let myCount = candidates.count
+        return myCount
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = UITableViewCell()
-        
-        let cand = contests[0]
-        
-        cell.textLabel!.text="row: \(indexPath.row)"
-        
+        let specificCandidate = self.candidates[indexPath.row]
+        cell.textLabel!.text = specificCandidate["name"] as! String
         return cell
         
         
