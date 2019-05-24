@@ -15,6 +15,7 @@ class CandidateListNewTableViewController: UIViewController, UITableViewDataSour
     
     @IBOutlet weak var tableView: UITableView!
     
+    
     let APIKey = "AIzaSyDaBUfYL90FvXCO9bfQ-7qJYON-d2yiDwo"
   
     var candidates = [[String: Any]]()
@@ -110,7 +111,8 @@ class CandidateListNewTableViewController: UIViewController, UITableViewDataSour
         
         let cell = UITableViewCell()
         let specificCandidate = self.candidates[indexPath.row]
-        cell.textLabel!.text = specificCandidate["name"] as! String
+        //cell.textLabel!.text = specificCandidate["name"] as! String
+    
         return cell
         
         

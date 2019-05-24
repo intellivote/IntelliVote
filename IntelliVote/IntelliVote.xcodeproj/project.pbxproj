@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8617CFDD227769FB00D64815 /* VotingLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8617CFDC227769FB00D64815 /* VotingLocationViewController.swift */; };
-		862367552297460B0085174E /* CandidateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862367542297460B0085174E /* CandidateCollectionViewCell.swift */; };
+		A508265C2297C14C00A87890 /* CandidateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A508265B2297C14C00A87890 /* CandidateCell.swift */; };
 		A543DFCC229787C8009FE98A /* CandidateListNewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A543DFCB229787C8009FE98A /* CandidateListNewTableViewController.swift */; };
 		A55C0E832257BFAE00D62665 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C0E822257BFAE00D62665 /* AppDelegate.swift */; };
 		A55C0E882257BFAE00D62665 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A55C0E862257BFAE00D62665 /* Main.storyboard */; };
@@ -47,10 +47,10 @@
 		565D9BA07DBE482ED0A52449 /* Pods_IntelliVoteUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IntelliVoteUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DB02782EA07CE41434745C6 /* Pods-IntelliVote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntelliVote.debug.xcconfig"; path = "Target Support Files/Pods-IntelliVote/Pods-IntelliVote.debug.xcconfig"; sourceTree = "<group>"; };
 		8617CFDC227769FB00D64815 /* VotingLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotingLocationViewController.swift; sourceTree = "<group>"; };
-		862367542297460B0085174E /* CandidateCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateCollectionViewCell.swift; sourceTree = "<group>"; };
 		87CECACB3272FCCABBF16B8C /* Pods_IntelliVoteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IntelliVoteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A4908E78F66FCD824C926C7 /* Pods_IntelliVote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IntelliVote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		95E9F3EA16018C5531244BC2 /* Pods-IntelliVoteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntelliVoteTests.debug.xcconfig"; path = "Target Support Files/Pods-IntelliVoteTests/Pods-IntelliVoteTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A508265B2297C14C00A87890 /* CandidateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateCell.swift; sourceTree = "<group>"; };
 		A543DFCB229787C8009FE98A /* CandidateListNewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateListNewTableViewController.swift; sourceTree = "<group>"; };
 		A55C0E7F2257BFAE00D62665 /* IntelliVote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntelliVote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A55C0E822257BFAE00D62665 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -147,7 +147,7 @@
 				A588332E227129AE0027DF8B /* RegisterViewController.swift */,
 				A588333022712BB30027DF8B /* HomeViewController.swift */,
 				8617CFDC227769FB00D64815 /* VotingLocationViewController.swift */,
-				862367542297460B0085174E /* CandidateCollectionViewCell.swift */,
+				A508265B2297C14C00A87890 /* CandidateCell.swift */,
 			);
 			path = IntelliVote;
 			sourceTree = "<group>";
@@ -415,10 +415,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8617CFDD227769FB00D64815 /* VotingLocationViewController.swift in Sources */,
+				A508265C2297C14C00A87890 /* CandidateCell.swift in Sources */,
 				A588332D2271274E0027DF8B /* LoginViewController.swift in Sources */,
 				A55C0E832257BFAE00D62665 /* AppDelegate.swift in Sources */,
 				A588332F227129AE0027DF8B /* RegisterViewController.swift in Sources */,
-				862367552297460B0085174E /* CandidateCollectionViewCell.swift in Sources */,
 				A543DFCC229787C8009FE98A /* CandidateListNewTableViewController.swift in Sources */,
 				A588333122712BB30027DF8B /* HomeViewController.swift in Sources */,
 			);
