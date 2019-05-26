@@ -13,32 +13,32 @@ class RegisterViewController: UIViewController {
 
     @IBOutlet weak var registerButton: UIButton!
     
-    
+    /*Username Field Outlet */
     @IBOutlet weak var registerUserNameField: HoshiTextField!
-    
+    /*Password Field Outlet */
     @IBOutlet weak var registerPasswordField: HoshiTextField!
-    
-    
+    /*Address Field Outlet */
     @IBOutlet weak var registerAddressField: HoshiTextField!
-    
+    /*City Field Outlet */
     @IBOutlet weak var registerCityField: HoshiTextField!
-    
+    /*County Field Outlet */
     @IBOutlet weak var registerCountyField: HoshiTextField!
-    
+    /*Zipcode Field Outlet */
     @IBOutlet weak var registerZipField: HoshiTextField!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.registerButton.layer.cornerRadius = 15
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func onTap(_ sender: Any) {
         self.view.endEditing(true)
     }
     
+    /*This function registers the user with Heroku */
     @IBAction func onRegister(_ sender: Any) {
+        /*Create a PF User. Save information aquired from the text fields */
         let user = PFUser()
         user.username = registerUserNameField.text
         user.password = registerPasswordField.text
@@ -47,6 +47,7 @@ class RegisterViewController: UIViewController {
         user["county"] = registerCountyField.text
         user["zip"] = registerZipField.text
 
+        /*Sign up the user in the background */
         user.signUpInBackground {
             (success, error) in
             if success {

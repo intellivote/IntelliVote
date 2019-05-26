@@ -11,18 +11,19 @@ import TextFieldEffects
 import Parse
 
 class LoginViewController: UIViewController {
-
+    /*Login Button Outlet */
     @IBOutlet weak var loginButton: UIButton!
+    /*Register Button Outlet */
     @IBOutlet weak var registerButton: UIButton!
-    
+    /*Username Field Outlet */
     @IBOutlet weak var usernameField: HoshiTextField!
-    
+    /*Pasword Field Outlet */
     @IBOutlet weak var passwordField: HoshiTextField!
-    
+    /*Author Label */
     @IBOutlet weak var authLabel: UILabel!
     
 
-    
+    /*Function that is loaded as soon as app enters this screen */
     override func viewDidLoad() {
         super.viewDidLoad()
         self.loginButton.layer.cornerRadius = 15
@@ -30,15 +31,14 @@ class LoginViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
-    
+    /*Hides keyboard */
     @IBAction func onTap(_ sender: Any) {
         self.view.endEditing(true)
     }
+    /*Logs user into the System */
     @IBAction func onLogin(_ sender: Any) {
         let username = usernameField.text!
         let password = passwordField.text!
-        
-        
         
         PFUser.logInWithUsername(inBackground: username, password: password) {
             (user, error) in
@@ -57,14 +57,6 @@ class LoginViewController: UIViewController {
         
     
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }
