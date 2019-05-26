@@ -114,7 +114,7 @@ This app helps eligible NYS voters stay informed about voting on the future elec
 
 ## Unit 14 Submission
 
-<img src="final.gif" width=250><br>
+<img src="http://g.recordit.co/qZkmRnFJ4q.gif" width=250><br>
 
 
 
